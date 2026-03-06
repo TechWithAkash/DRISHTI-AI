@@ -1,0 +1,223 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    animation: fade-in 0.4s ease;
+}
+
+/* VERDICT */
+.verdict {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-radius: 8px;
+    border-left-width: 4px;
+    border-left-style: solid;
+}
+
+.verdictReal {
+    background: linear-gradient(135deg, #021a0a, #042d10);
+    border-color: #00ff77;
+    border: 1px solid rgba(0, 255, 119, 0.3);
+    border-left: 4px solid #00ff77;
+}
+
+.verdictUncertain {
+    background: linear-gradient(135deg, #1a1205, #2d1f08);
+    border-color: #ffaa00;
+    border: 1px solid rgba(255, 170, 0, 0.3);
+    border-left: 4px solid #ffaa00;
+}
+
+.verdictFake {
+    background: linear-gradient(135deg, #1a0505, #2d0808);
+    border-color: #ff3b3b;
+    border: 1px solid rgba(255, 59, 59, 0.3);
+    border-left: 4px solid #ff3b3b;
+}
+
+.verdictUnknown {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-left: 4px solid #2a5a70;
+}
+
+.verdictLeft {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.verdictIcon {
+    font-size: 32px;
+}
+
+.verdictLabel {
+    font-family: var(--font-title);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.verdictFake .verdictLabel {
+    color: #ff6b6b;
+}
+
+.verdictReal .verdictLabel {
+    color: #00ff88;
+}
+
+.verdictUncertain .verdictLabel {
+    color: #ffbb33;
+}
+
+.verdictUnknown .verdictLabel {
+    color: #4a6a80;
+}
+
+.verdictSub {
+    font-size: 11px;
+    color: #3a6a7a;
+    margin-top: 3px;
+    font-family: var(--font-mono);
+    letter-spacing: 1px;
+}
+
+.gauge {
+    overflow: visible;
+}
+
+.metaRow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 0;
+}
+
+/* SECTION */
+
+/* API GRID */
+.apiGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+}
+
+.apiCard {
+    background: var(--bg2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 12px 14px;
+}
+
+.apiSource {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #2a5a70;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.apiBar {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.apiBarFill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.8s ease;
+}
+
+/* INDICATORS */
+.indicators {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.indicator {
+    padding: 12px 14px;
+    border-radius: 6px;
+    border-left-width: 3px;
+    border-left-style: solid;
+}
+
+.ind_high {
+    background: rgba(13, 3, 3, 0.8);
+    border-color: #ff3b3b;
+    border: 1px solid rgba(255, 59, 59, 0.2);
+    border-left: 3px solid #ff3b3b;
+}
+
+.ind_medium {
+    background: rgba(13, 10, 3, 0.8);
+    border-color: #ffaa00;
+    border: 1px solid rgba(255, 170, 0, 0.2);
+    border-left: 3px solid #ffaa00;
+}
+
+.ind_low {
+    background: rgba(3, 6, 13, 0.8);
+    border-color: #00aaff;
+    border: 1px solid rgba(0, 170, 255, 0.15);
+    border-left: 3px solid #0088cc;
+}
+
+.indTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.indName {
+    font-family: var(--font-title);
+    font-size: 14px;
+    font-weight: 700;
+    color: #c8d8e8;
+    letter-spacing: 1px;
+}
+
+.indExpl {
+    font-size: 12px;
+    color: #6a8a9a;
+    line-height: 1.5;
+}
+
+/* RAG */
+.ragBox {
+    background: linear-gradient(135deg, #050f20, #030a18);
+    border: 1px solid rgba(0, 245, 255, 0.12);
+    border-top: 2px solid rgba(0, 245, 255, 0.3);
+    border-radius: 6px;
+    padding: 16px 18px;
+}
+
+.ragText {
+    font-size: 13px;
+    color: #8aaabb;
+    line-height: 1.7;
+}
+
+/* TAGS */
+.tagWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    font-size: 10px;
+    letter-spacing: 1px;
+    background: rgba(255, 59, 59, 0.1);
+    border: 1px solid rgba(255, 59, 59, 0.25);
+    color: #ff8888;
+    padding: 3px 8px;
+    border-radius: 3px;
+}

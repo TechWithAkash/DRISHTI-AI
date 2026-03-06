@@ -1,0 +1,8 @@
+{
+    "ext_name": {
+        "message": "DRISHTI — Détecteur de Deepfakes"
+    },
+    "ext_description": {
+        "message": "Détection deepfake et IA en temps réel pour Google Meet"
+    }
+}

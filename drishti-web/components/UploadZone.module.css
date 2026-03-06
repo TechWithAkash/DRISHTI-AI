@@ -1,0 +1,45 @@
+.zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    border: 2px dashed rgba(0, 245, 255, 0.15);
+    border-radius: 10px;
+    background: rgba(9, 14, 26, 0.6);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.25s;
+    min-height: 180px;
+}
+
+.zone:hover,
+.dragOver {
+    border-color: rgba(0, 245, 255, 0.4) !important;
+    background: rgba(0, 245, 255, 0.04) !important;
+    box-shadow: 0 0 24px rgba(0, 245, 255, 0.08);
+}
+
+.input {
+    display: none;
+}
+
+.icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+    opacity: 0.7;
+}
+
+.label {
+    font-size: 15px;
+    color: #7a9ab0;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.hint {
+    font-size: 11px;
+    color: #2a5a70;
+    font-family: var(--font-mono);
+    letter-spacing: 1px;
+}

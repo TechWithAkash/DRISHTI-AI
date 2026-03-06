@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DRISHTI</title>
+<link rel="stylesheet" href="popup.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ── HEADER ─────────────────────────────────────────────────────────────── -->
+<div class="header">
+  <div class="header-left">
+    <div class="logo-wrap">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="10" stroke="#00f5ff" stroke-width="1.5" opacity="0.3"/>
+        <circle cx="12" cy="12" r="6" stroke="#00f5ff" stroke-width="1.5" opacity="0.6"/>
+        <circle cx="12" cy="12" r="2.5" fill="#00f5ff"/>
+        <line x1="12" y1="2" x2="12" y2="6" stroke="#00f5ff" stroke-width="1.5" opacity="0.4"/>
+        <line x1="12" y1="18" x2="12" y2="22" stroke="#00f5ff" stroke-width="1.5" opacity="0.4"/>
+        <line x1="2" y1="12" x2="6" y2="12" stroke="#00f5ff" stroke-width="1.5" opacity="0.4"/>
+        <line x1="18" y1="12" x2="22" y2="12" stroke="#00f5ff" stroke-width="1.5" opacity="0.4"/>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-text">DRISHTI</div>
+      <div class="logo-sub">Deepfake Detection · v2</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="backend-pill" id="backendPill">
+      <span class="be-dot" id="beDot"></span>
+      <span id="beLabel">checking...</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── MEETING STATUS ─────────────────────────────────────────────────────── -->
+<div id="meetStatus" class="meet-status offline">
+  <span id="meetIcon">⊘</span>
+  <span id="meetLabel">Not in a Google Meet</span>
+</div>
+
+<!-- ── SCAN METRICS ──────────────────────────────────────────────────────── -->
+<div class="metrics-row">
+  <div class="metric-card">
+    <div class="metric-val" id="scanCount">0</div>
+    <div class="metric-lbl" id="lbl_scanned">Scanned</div>
+  </div>
+  <div class="metric-card danger-card">
+    <div class="metric-val danger" id="fakeCount">0</div>
+    <div class="metric-lbl" id="lbl_suspicious">Suspicious</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-val safe" id="safeCount">0</div>
+    <div class="metric-lbl" id="lbl_safe">Safe</div>
+  </div>
+</div>
+
+<!-- ── PARTICIPANTS ───────────────────────────────────────────────────────── -->
+<div class="section-label" id="lbl_participants">PARTICIPANT ANALYSIS</div>
+<div id="participantList" class="participant-list">
+  <div class="empty-state" id="emptyState">
+    <div class="empty-icon">🎥</div>
+    <div id="lbl_empty">Open a Google Meet to start detection</div>
+  </div>
+</div>
+
+<!-- ── CONTROLS ───────────────────────────────────────────────────────────── -->
+<div class="controls">
+  <div class="control-row">
+    <label class="ctrl-label" id="lbl_detection">Detection</label>
+    <label class="toggle-switch">
+      <input type="checkbox" id="toggleEnabled" checked />
+      <span class="toggle-slider"></span>
+    </label>
+  </div>
+  <div class="control-row">
+    <label class="ctrl-label" id="lbl_voice">Voice Alerts</label>
+    <label class="toggle-switch">
+      <input type="checkbox" id="toggleVoice" />
+      <span class="toggle-slider"></span>
+    </label>
+  </div>
+  <div class="control-row">
+    <label class="ctrl-label" id="lbl_threshold">Threshold: <span id="thresholdVal">60</span>%</label>
+    <input type="range" id="thresholdRange" min="40" max="80" value="60" class="range-input" />
+  </div>
+</div>
+
+<!-- ── LANGUAGE SELECTOR ─────────────────────────────────────────────────── -->
+<div class="section-label">LANGUAGE / भाषा / 语言</div>
+<div class="lang-grid" id="langGrid">
+  <button class="lang-btn active" data-lang="en">🇬🇧 English</button>
+  <button class="lang-btn" data-lang="hi">🇮🇳 हिन्दी</button>
+  <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+  <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+  <button class="lang-btn" data-lang="ar">🇸🇦 العربية</button>
+  <button class="lang-btn" data-lang="zh">🇨🇳 中文</button>
+</div>
+
+<!-- ── ACTIONS ────────────────────────────────────────────────────────────── -->
+<div class="action-row">
+  <button class="btn-secondary" id="btnClear" title="Clear all scan results">Clear Results</button>
+  <button class="btn-secondary" id="btnOpenApp" title="Open full DRISHTI web app">Open App ↗</button>
+</div>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────────────── -->
+<div class="footer">
+  <span>DRISHTI · 6-Layer Deepfake Detection</span>
+  <button class="btn-link" id="btnSetup">Backend Setup</button>
+</div>
+
+<!-- ── BACKEND SETUP MODAL ────────────────────────────────────────────────── -->
+<div id="setupModal" class="modal hidden">
+  <div class="modal-box">
+    <div class="modal-title">🔧 Backend Setup</div>
+    <p class="modal-p">Run the DRISHTI backend locally to enable full AI analysis:</p>
+    <div class="code-block">cd streamlit<br/>pip install fastapi uvicorn<br/>python backend_server.py</div>
+    <p class="modal-p" style="margin-top:10px">Backend URL:</p>
+    <input type="text" id="backendUrlInput" class="text-input" value="http://localhost:8000" />
+    <div class="modal-actions">
+      <button class="btn-primary" id="btnSaveUrl">Save</button>
+      <button class="btn-secondary" id="btnCloseModal">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
