@@ -51,7 +51,7 @@ export default function CrazyLandingPage() {
       >
         <div className={styles.navLogoContainer}>
           <Eye size={24} color="#00f5ff" />
-          <span className={`${styles.navLogo} mono`}>DRISHTI v2</span>
+          <span className={`${styles.navLogo} mono`}>DRISHTI.AI v2</span>
         </div>
         <div className={styles.navLinks}>
           <a href="#features" className={styles.navLinkItem}>Intel</a>
@@ -80,7 +80,7 @@ export default function CrazyLandingPage() {
           </div>
 
           <h1 className={`${styles.heroTitle} mono`}>
-            <span className={styles.glitchText} data-text="DRISHTI">DRISHTI</span>
+            <span className={styles.glitchText} data-text="DRISHTI.AI">DRISHTI.AI</span>
           </h1>
 
           <motion.h2
@@ -89,7 +89,7 @@ export default function CrazyLandingPage() {
             transition={{ delay: 0.4 }}
             className={styles.heroSubTitle}
           >
-            Terminal-Grade Multimodal Deepfake Defense
+            Deepfake Recognition and Image Synthetic Hybrid Truth Identifier
           </motion.h2>
 
           <motion.p
@@ -98,7 +98,7 @@ export default function CrazyLandingPage() {
             transition={{ delay: 0.6 }}
             className={styles.heroDesc}
           >
-            A high-performance neural architecture designed to instantly tear through synthetic media signatures across Images, Audio, Video, and Text.
+            A multi-modal AI deepfake detection platform that analyzes images, video, audio, and text simultaneously using 5 parallel neural engines.
           </motion.p>
 
           <motion.div
