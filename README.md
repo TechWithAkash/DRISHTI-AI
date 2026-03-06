@@ -9,7 +9,9 @@
  ╚═════╝  ╚═╝  ╚═╝ ╚═╝ ╚══════╝ ╚═╝  ╚═╝    ╚═╝    ╚═╝ ╚═╝  ╚═╝  ╚═╝ ╚═╝
 ```
 
-### DRISHTI.AI — AI-Generated Content & Deepfake Detection Platform
+### DRISHTI.AI — **D**eepfake **R**ecognition and **I**mage **S**ynthetic **H**ybrid **T**ruth **I**dentifier
+
+*A multi-modal AI deepfake detection platform that analyzes images, video, audio, and text simultaneously using 5 parallel neural engines.*
 
 **Upload Media → Neural Analysis Pipeline → Forensic Insights**
 
