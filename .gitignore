@@ -1,0 +1,51 @@
+# ── OS ──
+.DS_Store
+Thumbs.db
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.venv/
+.env
+
+# ── Node / Next.js ──
+node_modules/
+.next/
+out/
+.turbo/
+
+# ── PWA Build Artifacts ──
+public/sw.js
+public/sw.js.map
+public/workbox-*.js
+public/workbox-*.js.map
+public/swe-worker-*.js
+public/fallback-*.js
+
+# ── Model weights (too large for GitHub) ──
+*.pth
+*.pt
+*.onnx
+*.h5
+*.pkl
+
+# ── Test artifacts ──
+test.jpg
+dummy.mp4
+test_video.py
+test_text.py
+*.log
+
+# ── IDE ──
+.vscode/
+.idea/
+
+# ── Agent / system ──
+.agent/
+.gemini/
