@@ -284,9 +284,12 @@ The backend exposes these REST endpoints (all on `http://localhost:8000`):
 
 ---
 
-## 👨‍💻 Team
+## 👨‍💻 Team Refactor
 
-**Akash Vishwakarma** — Full Stack Development, ML Engineering
+- **Roshan Ajith** (TE CE) — Core Frontend Developer
+- **Akash Vishwakarma** (TE CE) — Code Backend Developer
+- **Soham Kapse** (BE CE) — Core AI ML Developer
+- **Paras Kumbhar** (BE AIML) — Core AI ML Engineering
 
 ---
 
